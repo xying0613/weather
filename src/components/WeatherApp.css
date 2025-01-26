@@ -1,0 +1,226 @@
+/* =================== */
+/* Global Styles       */
+/* =================== */
+
+.app-container {
+    width: 60%;
+}
+
+.weather-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+/* =================== */
+/* Search Bar          */
+/* =================== */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* =================== */
+/* Error Message       */
+/* =================== */
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* =================== */
+/* Weather Info        */
+/* =================== */
+
+.weather-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+    border-radius: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light & Dark Mode */
+.weather-info-container.light-mode {
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.search-history-container.light-mode {
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+.weather-info-container.dark-mode,
+.search-history-container.dark-mode {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+/* =================== */
+/* Weather Icon        */
+/* =================== */
+
+.weather-icon {
+    position: absolute;
+    top: -95px;
+    right: -40px;
+    width: 300px;
+    height: auto;
+}
+
+/* =================== */
+/* Today Weather       */
+/* =================== */
+
+.searched-weather-container {
+    display: block;
+    width: 85%;
+    position: relative;
+    text-align: left;
+}
+
+.today-weather-title {
+    padding-top: 50px;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+}
+
+.today-weather-location {
+    font-weight: 700;
+}
+
+.today-weather-temp {
+    font-size: 120px;
+    font-weight: 800;
+    margin: 0;
+    color: rgb(108, 64, 181);
+}
+
+.today-weather-min-max-temp {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Light & Dark Mode for Text */
+.today-weather-title.light-mode,
+.min-max-temp.light-mode {
+    color: black;
+}
+
+.today-weather-details.light-mode,
+.today-weather-location.light-mode {
+    color: rgba(102, 102, 102);
+}
+
+.today-weather-title.dark-mode,
+.today-weather-min-max-temp.dark-mode,
+.today-weather-details.dark-mode,
+.today-weather-location.dark-mode,
+.today-weather-temp.dark-mode {
+    color: white;
+}
+
+/* =================== */
+/* Weather Details     */
+/* =================== */
+
+.today-weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 75%;
+    margin: -35px 25% 16px;
+}
+
+.today-weather-cloud-sun,
+.today-weather-humidity,
+.today-weather-datetime {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* =================== */
+/* Search History      */
+/* =================== */
+
+.search-history-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-radius: 24px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.search-history-title {
+    width: 90%;
+    text-align: left;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.search-history-list {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* =================== */
+/* Mobile View        */
+/* =================== */
+
+@media (max-width: 1000px) {
+    .app-container {
+        width: 95%;
+    }
+
+    .weather-icon {
+        top: -60px;
+        right: -10px;
+        width: 150px;
+    }
+
+    .today-weather-temp {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    .today-weather-min-max-temp,
+    .today-weather-location,
+    .today-weather-cloud-sun,
+    .today-weather-humidity,
+    .today-weather-datetime {
+        font-size: 14px;
+    }
+
+    .today-weather-details {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: -63px;
+        font-size: 14px;
+    }
+
+    .search-history-title {
+        font-size: 14px;
+    }
+}

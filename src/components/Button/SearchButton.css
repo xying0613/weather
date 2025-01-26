@@ -1,0 +1,52 @@
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60px;
+    height: 60px;
+}
+
+/* Dark Theme */
+.search-button.dark-mode {
+    background-color: #28124D;
+    color: white;
+}
+
+/* Light Theme */
+.search-button.light-mode {
+    background-color: #6C40B5;
+    color: white;
+}
+
+/* Icon inside button */
+.search-icon {
+    font-size: 24px;
+}
+
+
+/* Mobile View */
+@media (max-width: 1000px) {
+    .search-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 51px;
+        height: 51px;
+    }
+    
+    /* Icon inside button */
+    .search-icon {
+        font-size: 16px;
+    }
+}
+  
